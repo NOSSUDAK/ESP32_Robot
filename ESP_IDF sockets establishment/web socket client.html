@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ 
+   <head>
+      <title>Robot Control Interface</title>
+      <link rel="icon" type="image/ico" href="favicon.ico" />
+      <link rel="stylesheet" href="style.css">
+     <!-- <script src="script.js"></script> -->
+      <script src="script_ESPIDF.js"></script>
+        
+   </head>
+ 
+   <body>
+      <div>
+         <button onclick = "lightsON()" id = "lightsON">Lights ON</button> 
+      </div>
+      <div>
+         <button onclick = "camLightsON()" id = "camLights">Camera light ON</button> 
+      </div>
+      <div>
+         <button onclick = "lightsOFF()"  id = "lightsOFF">Lights OFF</button>
+      </div>
+      <div>
+          <input type="range" min="90" max="160" step="1" value="120"  id="sliderH"  onchange="SendHorizontalCameraPosition()"/>
+      </div>
+      <div>
+          <input type="range" min="80" max="160" step="1" value="120"  id="sliderV"  onchange="SendVerticalCameraPosition()"/>          
+      </div>
+      <p> Below are hand control sliders</p>
+       
+      <div>
+          <input type="range" min="50" max="180" step="5" value="100"  id="slider1"  onchange="SendBasePosition()"/>
+      </div>
+      <div>
+          <input type="range" min="50" max="260" step="1" value="90"  id="slider2"  onchange="SendElbowPosition()"/>          
+      </div>
+      <div>
+          <input type="range" min="50" max="500" step="5" value="140"  id="slider3"  onchange="SendWristPosition()"/>
+      </div>
+      <div>
+          <input type="range" min="150" max="240" step="1" value="150"  id="slider4"  onchange="SendClawPosition()"/>          
+      </div>
+       <p> Max speed value</p>
+       <div>
+          <input type="range" min="50" max="200" step="1" value="150"  id="speed_slider"  onchange="setSpeed()"/>          
+      </div>
+       <!--
+      <div id="video"> 
+          <img src="http://192.168.31.205:81/stream" controls width="840" height="580"> 
+      </div> -->
+       <p> Use arrow keys (UP, DOWN, LEFT, RIGHT) to control the robot</p>
+   </body>
+</html>

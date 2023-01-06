@@ -1,0 +1,1 @@
+please choose the right model to install your robot arm.Any problem, please contact me.yichoneyi@163.com,yichone@doit.am
